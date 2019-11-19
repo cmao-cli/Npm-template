@@ -2,12 +2,15 @@ import nodeResolve from 'rollup-plugin-node-resolve';
 import commonjs from 'rollup-plugin-commonjs';
 import sourceMaps from 'rollup-plugin-sourcemaps';
 import camelCase from 'lodash.camelcase';
+import replace from 'rollup-plugin-replace'
 import typescript from 'rollup-plugin-typescript2';
 import json from 'rollup-plugin-json';
+import { terser } from 'rollup-plugin-terser'
 
 const pkg = require('./package.json');
 
 const libraryName = 'index';
+const noDeclarationFiles = { compilerOptions: { declaration: false } };
 
 export default [
   // CommonJS

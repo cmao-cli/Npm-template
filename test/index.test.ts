@@ -1,7 +1,5 @@
-function sum(a: number, b: number) {
-  return a + b
-}
+import { sayHi } from '../src/index'
 
-test('adds 1 + 2 to equal 3', () => {
-  expect(sum(1, 0)).toBe(1)
+it('return same value', () => {
+  expect(sayHi('hello')).toBe('hello')
 })
