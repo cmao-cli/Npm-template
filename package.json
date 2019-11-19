@@ -3,8 +3,9 @@
   "version": "0.0.0",
   "description": "",
   "keywords": [],
+  "npmName": "redux",
   "main": "dist/hookstore.umd.js",
-  "module": "dist/hookstore.es5.js",
+  "unpkg": "dist/redux.js",
   "typings": "dist/types/index.d.ts",
   "files": [
     "dist"
@@ -19,11 +20,11 @@
     "node": ">=6.0.0"
   },
   "scripts": {
-    "dev": "npx mlz-pack serve ./example/index.tsx",
-    "lint": "tslint  --project tsconfig.json -t codeFrame 'src/**/*.ts' 'test/**/*.ts'",
+    "dev": "mlz-pack serve ./example/index.tsx",
+    "build": "rollup",
+    "start": "rollup -w",
+    "lint": "tslint --project tsconfig.json -t codeFrame 'src/**/*.ts' 'test/**/*.ts'",
     "prebuild": "rimraf dist",
-    "build": "tsc --module commonjs && rollup -c rollup.config.ts",
-    "start": "rollup -c rollup.config.ts -w",
     "test": "jest --coverage",
     "test:watch": "jest --coverage --watch",
     "test:prod": "npm run lint && npm run test -- --no-cache",
@@ -70,7 +71,7 @@
     "@commitlint/cli": "^7.1.2",
     "@commitlint/config-conventional": "^7.1.2",
     "@mlz/lint": "^1.0.10",
-    "@mlz/pack": "^0.1.4",
+    "@mlz/pack": "^0.1.10",
     "@types/jest": "^23.3.2",
     "@types/node": "^10.11.0",
     "@types/react-dom": "^16.9.4",

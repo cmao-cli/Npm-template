@@ -1,5 +1,6 @@
-import createStore from './createStore';
-import connect from './connect';
-import getStore from './getStore';
+const lq = 'this is lq, working now'
+const sayHi = (word: string) => {
+  console.log(word)
+}
 
-export { createStore, connect, getStore };
+export { lq, sayHi }
