@@ -2,23 +2,28 @@
 `npm run start`
 
 ## 测试
-1. `test`
+1. `test`: jest跑项目中的所有测试文件，并输出测试覆盖率
 2. `test:watch`
 3. `test:prod`: 推到远程仓库前执行lint和test
 
-## 提交
-提交之前集成pretter，能够
 
-
-打包和输出
-1. 输出commonjs 这个是import package in webpack 或者 browserify 或者在node 环境时使用
-2. umd 直接使用script引入
+## 打包和输出
+```
 dist
-  lib: commonjs main字段
-  umd: umd unpkg字段
+├── lib //commonjs版本，webpack等打包工具使用
+│   └── redux.js
+├── types //类型定义
+│   └── index.d.ts
+└── umd //umd版本，可直接使用script标签引入
+    └── redux.js
+```
 
-发布
-tslint
-commit format
+## 发布
+npm publish
+
+## todo
+1. sourceMaps
+2. `npm run publish` 集成ci
+在本地改版本号，然后打tag，然后推到远程ci，如果ci发现有一个新的tag，就执行发布npm包的脚本
 
 
