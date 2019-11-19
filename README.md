@@ -8,6 +8,7 @@
 
 
 ## 打包和输出
+`npm run build`
 ```
 dist
 ├── lib //commonjs版本，webpack等打包工具使用
