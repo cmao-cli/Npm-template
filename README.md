@@ -1,7 +1,14 @@
-开发时
-开发时，你都是要将你的ts文件编译为js然后使用的，所以在开发的时候需要tsc -w
+## 开发
+`npm run start`
 
-测试
+## 测试
+1. `test`
+2. `test:watch`
+3. `test:prod`: 推到远程仓库前执行lint和test
+
+## 提交
+提交之前集成pretter，能够
+
 
 打包和输出
 1. 输出commonjs 这个是import package in webpack 或者 browserify 或者在node 环境时使用
@@ -13,3 +20,5 @@ dist
 发布
 tslint
 commit format
+
+
