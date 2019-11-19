@@ -20,9 +20,9 @@
     "node": ">=6.0.0"
   },
   "scripts": {
-    "dev": "mlz-pack serve ./example/index.tsx",
+    "start": "rollup -c rollup.config.js -w & npm run example",
     "build": "rollup -c rollup.config.js",
-    "start": "rollup -c rollup.config.js -w",
+    "example": "mlz-pack serve ./example/index.tsx",
     "lint": "tslint --project tsconfig.json -t codeFrame 'src/**/*.ts' 'test/**/*.ts'",
     "prebuild": "rimraf dist",
     "test": "jest --coverage",
