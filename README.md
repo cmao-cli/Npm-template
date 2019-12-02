@@ -20,13 +20,10 @@ dist
 ```
 
 ## 发布
-npm publish
+集成到了github action中，当推送代码到master分支或者合并代码到master分支的时候都会触发actions中的命令。
+所以开发流程应该是在特性分支进行开发，合并到master分支的触发github action就进行自动发版。
+**注意** 需要配置自己的仓库的`secrets.npm_token`到`.github/workflows/npmpublish.yml`中，配置路径为settings中的secrets。
 
-## todo
-1. sourceMaps
-2. `npm run publish` 集成ci
-在本地改版本号，然后打tag，然后推到远程ci，如果ci发现有一个新的tag，就执行发布npm包的脚本
 
-<!-- release -->
 
 
