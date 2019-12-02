@@ -32,7 +32,7 @@
     "precommit": "lint-staged",
     "prepush": "npm run test:prod && npm run build",
     "commitmsg": "commitlint -E HUSKY_GIT_PARAMS",
-    "postinstall": "ts-node ./tools/init"
+    "postinstall": "ts-node ./init"
   },
   "lint-staged": {
     "{src,test}/**/*.ts": [
