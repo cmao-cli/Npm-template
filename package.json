@@ -1,6 +1,6 @@
 {
   "name": "@mlz/--libraryname--",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "",
   "keywords": [],
   "pkgName": "--libraryname--",
@@ -32,8 +32,7 @@
     "precommit": "lint-staged",
     "prepush": "npm run test:prod && npm run build",
     "commitmsg": "commitlint -E HUSKY_GIT_PARAMS",
-    "release": "standard-release",
-    "postinstall": "ts-node ./init"
+    "release": "standard-version"
   },
   "lint-staged": {
     "{src,test}/**/*.ts": [
