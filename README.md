@@ -4,7 +4,7 @@
 ## 测试
 1. `test`: jest跑项目中的所有测试文件，并输出测试覆盖率
 2. `test:watch`
-3. `test:prod`: 推到远程仓库前执行lint和test
+3. `test:prod`: 推到远程仓库前执行test
 
 
 ## 打包和输出
@@ -26,5 +26,7 @@ npm publish
 1. sourceMaps
 2. `npm run publish` 集成ci
 在本地改版本号，然后打tag，然后推到远程ci，如果ci发现有一个新的tag，就执行发布npm包的脚本
+
+<!-- release -->
 
 

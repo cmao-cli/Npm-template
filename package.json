@@ -32,6 +32,7 @@
     "precommit": "lint-staged",
     "prepush": "npm run test:prod && npm run build",
     "commitmsg": "commitlint -E HUSKY_GIT_PARAMS",
+    "release": "standard-release",
     "postinstall": "ts-node ./init"
   },
   "lint-staged": {
@@ -101,6 +102,7 @@
     "rollup-plugin-terser": "^5.1.2",
     "rollup-plugin-typescript2": "^0.25.2",
     "shelljs": "^0.8.3",
+    "standard-version": "^7.0.1",
     "ts-jest": "^23.10.2",
     "tslint": "^5.11.0",
     "typescript": "^3.7.2"
