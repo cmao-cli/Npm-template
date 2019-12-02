@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import * as redux from '../dist/lib/redux';
+// test postinstall会先设置libraryname
+import * as redux from '../dist/lib/--libraryname--';
 
 redux.sayHi('hello');
 

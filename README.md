@@ -12,11 +12,11 @@
 ```
 dist
 ├── lib //commonjs版本，webpack等打包工具使用
-│   └── redux.js
+│   └── pkgName.js
 ├── types //类型定义
 │   └── index.d.ts
 └── umd //umd版本，可直接使用script标签引入
-    └── redux.js
+    └── pkgName.js
 ```
 
 ## 发布
