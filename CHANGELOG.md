@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.2](https://github.com/cmao-cli/Npm-template/compare/v0.0.1...v0.0.2) (2019-12-02)
+
+
+### Features
+
+* **pkg:** add release ([65d7935](https://github.com/cmao-cli/Npm-template/commit/65d79358dd5bf17b5322652523e240425f59438d))
+
 ### 0.0.1 (2019-12-02)
 
 
