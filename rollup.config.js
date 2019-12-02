@@ -31,7 +31,7 @@ export default [
     output: {
       file: pkg.unpkg,
       format: 'umd',
-      name: pkg.npmName,
+      name: pkg.pkgName,
       indent: false
     },
     plugins: [
