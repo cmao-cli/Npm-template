@@ -60,7 +60,6 @@ const finalize = () => {
   delete pkg.scripts.postinstall;
 
   const space = 2;
-  console.log('pkg is', pkg);
   fs.writeFileSync(jsonPackage, JSON.stringify(pkg, null, space));
   console.log(colors.green('Postinstall script has been removed'));
 
