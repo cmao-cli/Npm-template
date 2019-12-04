@@ -43,8 +43,9 @@ dist
 ```
 
 ## 发布
-集成到了github action中，当推送代码到master分支或者合并代码到master分支的时候都会触发actions中的命令。
-所以开发流程应该是在特性分支进行开发，合并到master分支的触发github action就进行自动发版。
+1. 本地运行`npm run release`更新版本号和自动生成CHANGELOG.md
+2. `git push`推送代码到`master`分支。触发`npmpublish`action，会自动运行`build test:prod`然后执行`npm publish`
+所以开发流程应该是在特性分支进行开发，合并到`master`分支的触发`github action`进行自动发版。
 
 **注意** 需要配置自己的仓库的`secrets.npm_token`到`.github/workflows/npmpublish.yml`中，配置路径为settings中的secrets。
 
