@@ -26,7 +26,7 @@ inquirer.prompt([
 
 const modifyContents = (libName:string) => {
   console.log(colors.underline.white('Modified'));
-  const files = modifyFiles.map((f) => path.resolve(__dirname, '..', f));
+  const files = modifyFiles.map((f) => path.resolve(__dirname, f));
   try {
     const changes = replace.sync({
       files,
@@ -44,7 +44,7 @@ const modifyContents = (libName:string) => {
 const removeInit = () => {
   console.log(colors.underline.white('Removed init.ts'));
 
-  rm('-rf', path.resolve(__dirname, '../tools'));
+  rm('-rf', path.resolve(__dirname, './init.ts'));
 
   console.log('\n');
 };
@@ -53,13 +53,14 @@ const finalize = () => {
   console.log(colors.underline.white('Finalizing'));
 
   // Remove post-install command
-  const jsonPackage = path.resolve(__dirname, '..', 'package.json');
+  const jsonPackage = path.resolve(__dirname, 'package.json');
   const pkg = JSON.parse(fs.readFileSync(jsonPackage) as any);
 
   // Note: Add items to remove from the package file here
   delete pkg.scripts.postinstall;
 
   const space = 2;
+  console.log('pkg is', pkg);
   fs.writeFileSync(jsonPackage, JSON.stringify(pkg, null, space));
   console.log(colors.green('Postinstall script has been removed'));
 
