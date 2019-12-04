@@ -7,7 +7,7 @@
 - 集成`jest`来做单元测试
 - 使用`@mlz/lint`来规范代码风格
 - 使用`standard-version`自动发布生成版本号和生成changelog
-- 使用`github actions`来在代码push到master时候自动发布npm包
+- 配置了`github actions`来在代码push到master时候自动发布npm包
 
 ### 使用
 ```
