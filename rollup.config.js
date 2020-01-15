@@ -10,6 +10,21 @@ const pkg = require('./package.json');
 const noDeclarationFiles = { compilerOptions: { declaration: false } };
 
 export default [
+  // es
+  {
+    input: 'src/index.ts',
+    output: { file: pkg.module, format: 'es', indent: false },
+    external: [
+      ...Object.keys(pkg.peerDependencies || {})
+    ],
+    plugins: [
+      nodeResolve({
+        extensions: ['.ts']
+      }),
+      json(),
+      typescript({ useTsconfigDeclarationDir: true }),
+    ]
+  },
   // CommonJS
   {
     input: 'src/index.ts',
