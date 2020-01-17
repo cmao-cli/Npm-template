@@ -41,6 +41,7 @@ dist
 └── umd //umd版本，可直接使用script标签引入
     └── pkgName.js
 ```
+**注：**：使用package.json中的files文件来代替.npmignore
 
 ## 发布
 1. 本地运行`npm run release`更新版本号和自动生成CHANGELOG.md
